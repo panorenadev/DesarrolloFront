@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Tienda de Tenis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Librearía awesome -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <!-- Botón para mostrar/ocultar el menú -->
+    <button id="menu-toggle">☰</button>
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="producto.html">Productos</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="login.html">Login/Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="banner">
+      <h1>Bienvenido a la Tienda de Tenis</h1>
+      <p>Encuentra los mejores tenis para tu estilo y comodidad</p>
+    </section>
+
+    <h2>Productos Destacados</h2>
+    <section class="productos">
+      <div class="producto">
+        <a href="detalle.html">
+          <img src="Figuras/zapato1.webp" alt="Zapato 1">
+          <h3>Zapato 1</h3>
+          <p>$50.00</p>
+        </a>
+        <button> <img src="Figuras/cart-shopping-solid.svg" alt="Carrito1" class="iconoCar"> Agregar al carrito</button>
+        <br> </br>
+      </div>
+      <div class="producto">
+        <a href="detalle.html">
+          <img src="Figuras/zapato2.webp" alt="Zapato 2">
+          <h3>Zapato 2</h3>
+          <p>$60.00</p>
+        </a>
+        <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    // JavaScript para alternar el menú
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', function () {
+      sidebar.classList.toggle('active'); // Añade o quita la clase 'active' al menú
+    });
+  </script>
+  <!--<script src="script.js"></script>-->
+</body>
+
+</html>

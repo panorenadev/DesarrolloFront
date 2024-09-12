@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Producto - Tienda de Zapatos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    <!-- Librearía awesome -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="producto.html">Productos</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="login.html">Login/Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- El detalle por ahora es estático para que sea dinámico se debe utilizar JavaScript-->
+    <section class="detalle-producto">
+      <img src="Figuras/zapato1.webp" alt="Zapato 1">
+      <div class="info-producto">
+        <h1>Zapato 1</h1>
+        <p>$50.00</p>
+        <p>Descripción detallada del zapato.</p>
+        <label for="talla">Selecciona tu talla:</label>
+        <select id="talla">
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+        </select>
+        <button><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

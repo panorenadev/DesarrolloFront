@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap);
+
+
+/* Estilo general para el cuerpo del documento */
+body {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  /* Elimina el margen predeterminado del navegador */
+  padding: 0;
+  /* Elimina el relleno predeterminado del navegador */
+  background-color: whitesmoke;
+  /* Fondo gris claro para todo el sitio */
+  color: black;
+  /* Color principal del texto */
+  font-size: 16px;
+}
+
+
+h1,
+h2,
+p,
+main {
+  text-align: center;
+}
+
+.producto {
+  background-color: white;
+  /* Fondo blanco para cada producto */
+  border: 1px solid lightgrey;
+  /* Borde gris claro para los productos */
+  border-radius: 8px;
+  /* Bordes redondeados para los productos */
+  padding: 15px;
+  /* Relleno dentro del contenedor de productos */
+  text-align: center;
+  /* Centra el texto en los productos */
+  width: 300px;
+  /* Ancho fijo para cada producto */
+}
+
+.producto img {
+  max-width: 100%;
+  /* Imagen ajusta al ancho del contenedor */
+  border-radius: 8px;
+  /* Bordes redondeados para la imagen */
+}
+
+.producto h3 {
+  font-size: 20px;
+  /* Tamaño de fuente para el nombre del producto */
+  color: #333;
+  /* Color del texto del nombre del producto */
+  margin: 10px 0;
+  /* Espaciado vertical para el nombre del producto */
+}
+
+.producto p {
+  font-size: 18px;
+  /* Tamaño de fuente para el precio del producto */
+  color: #555;
+  /* Color gris oscuro para el precio */
+  margin: 5px 0;
+  /* Espaciado vertical para el precio */
+}
+
+.producto button {
+  background-color: #28a745;
+  /* Color de fondo verde para el botón */
+  color: #fff;
+  /* Color del texto del botón */
+  border: none;
+  /* Elimina el borde predeterminado del botón */
+  border-radius: 5px;
+  /* Bordes redondeados para el botón */
+  padding: 10px 20px;
+  /* Espaciado interno del botón */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por el botón */
+  font-size: 16px;
+  /* Tamaño de fuente para el botón */
+  transition: background-color 0.3s ease;
+  /* Transición suave para el cambio de color */
+}
+
+.producto button:hover {
+  background-color: #218838;
+  /* Color de fondo más oscuro cuando se pasa el ratón sobre el botón */
+}
+
+  button .iconoCar {
+    width: 30px;          /* Ajusta el tamaño del icono */
+    height: 18px;         /* Mantén la proporción del icono */
+    margin-right: 8px;    /* Espacio entre el icono y el texto */
+    vertical-align: middle; /* Alinear verticalmente el icono */
+    filter: invert(1); /* Cambia el color del icono a blanco si es SVG */
+  }
+
+
+.productos {
+  display: flex;
+  /* Activa el modo flex para este contenedor grid  filas y columnas*/
+  flex-wrap: wrap;
+  /* Permite que los elementos se envuelvan en la siguiente línea si no caben */
+  gap: 20px;
+  /* Espacio entre los productos */
+  justify-content: center;
+  /* Centra horizontalmente los productos */
+  padding: 20px;
+  /* Espaciado interno para el contenedor de productos */
+}
+
+
+input[type="text"] {
+  width: 100%;
+  /* Hace que la barra de búsqueda ocupe todo el ancho disponible */
+  max-width: 600px;
+  /* Limita el ancho máximo */
+  height: 30px;
+  /* Aumenta la altura de la barra de búsqueda */
+  padding: 5px;
+  /* Añade espacio dentro de la barra de búsqueda */
+  border: 2px solid #ccc;
+  /* Añade un borde gris claro */
+  border-radius: 20px;
+  /* Bordes redondeados */
+  padding-left: 30px;
+  /* Espacio a la derecha dentro del campo */
+  font-size: 18px;
+  /* Tamaño de la fuente */
+}
+
+/* Contenedor de la barra de búsqueda */
+.search-container {
+  display: flex;
+  /* Utiliza flexbox para centrar el contenido */
+  position: relative;
+  /* Necesario para posicionar el ícono dentro del contenedor */
+  width: 100%;
+  /* Ajusta el ancho según tus necesidades */
+  max-width: 400px;
+  /* Limita el ancho máximo */
+  margin: 0 auto;
+  /* Centra horizontalmente el contenedor */
+}
+
+/* Estilos para el ícono de búsqueda */
+.search-icon {
+  position: absolute;
+  /* Posiciona el ícono relativo al contenedor */
+  right: 15px;
+  /* Alinea el ícono a la derecha del campo de entrada */
+  top: 50%;
+  /* Centra verticalmente el ícono */
+  transform: translateY(-50%);
+  /* Ajuste fino para centrar completamente */
+  width: 20px;
+  /* Ajusta el tamaño del ícono */
+  height: 20px;
+  /* Ajusta el tamaño del ícono */
+  fill: #888;
+  /* Color del ícono */
+  pointer-events: none;
+  /* Asegura que el ícono no interfiera con los clics en el campo de entrada */
+}
+
+/* Estilos para el contenedor del menú */
+nav {
+  width: 200px;
+  background-color: #333;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 60px; /* Se ajusta el padding-top para que el menú no esté cubierto por el botón */
+  transition: transform 0.3s ease; /* Transición suave al mostrar/ocultar */
+  transform: translateX(-100%); /* Mueve el menú fuera de la vista por defecto */
+}
+
+/* Clase activa para mostrar el menú */
+nav.active {
+  transform: translateX(0); /* Vuelve a mostrar el menú */
+}
+
+/* Quitar los puntos de la lista */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para los elementos del menú */
+nav ul li {
+  margin: 0;
+}
+
+/* Estilo para los enlaces del menú */
+nav ul li a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Efecto hover */
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Botón para abrir/cerrar el menú */
+#menu-toggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  position: fixed;
+  top: 20px; /* Asegura que el botón esté por encima del menú y visible */
+  left: 20px;
+  cursor: pointer;
+  z-index: 2; /* Aumenta el z-index para que el botón esté encima del menú */
+}
+
+/* Ajustes para el contenido principal */
+main {
+  margin-left: 20px; /* Margen para el contenido por defecto */
+  padding: 40px;
+  transition: margin-left 0.3s ease; /* Transición para el movimiento del contenido */
+}
+
+/* Cuando el menú esté activo, mueve el contenido hacia la derecha */
+nav.active ~ main {
+  margin-left: 220px; /* Espacio suficiente para que no se sobreponga el menú */
+}
+
+  /* Estilos para el carrito y páginas de perfil */
+  .carrito, .perfil {
+    background-color: #fff; /* Fondo blanco para el carrito y perfil */
+    padding: 20px; /* Relleno para el carrito y perfil */
+    border-radius: 8px; /* Bordes redondeados para el carrito y perfil */
+    margin: 20px auto; /* Margen automático para centrar */
+    max-width: 600px; /* Ancho máximo para el contenedor */
+  }
+
+
+/* Estilos para el formulario de login/registro */
+form {
+  background-color: #fff; /* Fondo blanco para los formularios */
+  padding: 20px; /* Relleno interno de los formularios */
+  border-radius: 8px; /* Bordes redondeados para los formularios */
+  border: 1px solid #ddd; /* Borde gris claro para los formularios */
+  max-width: 400px; /* Ancho máximo para el formulario */
+  margin: 20px auto; /* Centra el formulario horizontalmente */
+}
+
+form label {
+  font-size: 14px; /* Tamaño de fuente para las etiquetas */
+  color: #333; /* Color del texto de las etiquetas */
+  display: block; /* Hace que las etiquetas se muestren en bloque */
+  margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
+}
+
+form input {
+  width: 90%; /* Ancho completo para los campos de entrada */
+  padding: 10px; /* Relleno interno de los campos de entrada */
+  margin-bottom: 15px; /* Espaciado debajo de los campos de entrada */
+  border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+  border: 1px solid #ccc; /* Borde gris claro para los campos de entrada */
+}
+
+/* Estilos botones login/registro*/
+#formlogin button {
+  display: block; /* Hace que el botón se muestre como bloque */
+  width: 40%; /* Ancho completo para botones generales */
+  padding: 10px; /* Relleno interno del botón */
+  background-color: #007bff; /* Color de fondo azul para botones */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 5px; /* Bordes redondeados para el botón */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
+   margin: 0 auto; /*Centrar botón*/
+}
+
+input {
+  font-family: inherit; /* Hereda la fuente del elemento padre */
+  font-size: inherit;   /* Hereda el tamaño de fuente del elemento padre */
+}
+
+
+@media (max-width: 768px){
+  body {
+    font-size: 14px;
+    background-color: #ffff;
+  }
+
+
