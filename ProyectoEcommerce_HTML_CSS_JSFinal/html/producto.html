@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Tienda de Tenis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Librearía awesome -->
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/header.js"defer></script>
+  <script src="../js/productSearch.js"defer></script>
+  <script src="../js/car.js"defer></script>
+</head>
+
+<body>
+
+  <main>
+    <h2>Todos los Productos</h2>
+    <div class="search-container">
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="nombre, talla o color...">
+        <button type="submit" id="search-btn">🔍</button>
+    </form>
+    </div>
+    <section class="productos">
+      <div class="producto" data-name="zapato1" data-size="7" color="blanco">
+          <img src="../Figuras/zapato1.webp" alt="Zapato 1">
+          <h3>Zapato 1</h3>
+          <p>$50.00</p>
+          <p>Talla 7</p>
+          <p>Color blanco</p>
+        </a>
+        <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+      </div>
+      <div class="producto" data-name="zapato2" data-size="8" color="verde">
+          <img src="../Figuras/zapato2.webp" alt="Zapato 2">
+          <h3>Zapato 2</h3>
+          <p>$60.00</p>
+          <p>Talla 8</p>
+          <p>Color verde</p>
+        </a>
+        <button><i class="fa-solid fa-cart-shopping"></i> Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
